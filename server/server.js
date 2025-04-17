@@ -413,7 +413,6 @@ app.get("/products", async (req, res) => {
 // Add Product (Admin Only)
 app.post("/products", verifyToken, async (req, res) => {
   if (req.role !== "admin") return res.status(403).json({ message: "Access denied" });
-
   const { source, destination, availableDates, time, availableSeat,busType} = req.body;
   const newProduct = new Product({ source, destination, availableDates,time,availableSeat,busType });
   await newProduct.save();
