@@ -23,6 +23,8 @@ const AllBookings = () => {
 
   return (
 <div className="all-bookings-wrapper">
+{isAdmin && <p>Welcome, Admin!</p>}
+
   <h2 className="booking-title">All Bookings</h2>
   {bookings.length === 0 ? (
     <p className="no-booking-text">No bookings found.</p>

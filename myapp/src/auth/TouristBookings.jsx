@@ -29,6 +29,8 @@ const TouristBookings = () => {
       }, []);
   return (
 <div className="vehicle-table-wrapper">
+{isAdmin && <p>Welcome, Admin!</p>}
+
   <h2 className="vehicle-table-title">User Table</h2>
 
   <div className="table-container">

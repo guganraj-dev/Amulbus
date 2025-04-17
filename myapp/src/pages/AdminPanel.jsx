@@ -104,6 +104,7 @@ const AdminPanel = ({products,setProducts}) => {
     <Link to="/adminpage"><button className="admin-btn-back">BACK</button></Link>
     <Link to="/buslist"><button className="admin-btn-view">VIEW BUS</button></Link>
   </div>
+  {isAdmin && <p>Welcome, Admin!</p>}
 
   <h1 className="admin-title">Admin Panel</h1>
 

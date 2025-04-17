@@ -23,15 +23,13 @@ const TouristUsers = () => {
     },[navigate])
 
 
-   
-      useEffect(() => {
-   
-      }, []);
   return (
 <div className="user-table-wrapper">
   <h2 className="user-table-title">User Table</h2>
 
   <div className="table-container">
+  {isAdmin && <p>Welcome, Admin!</p>}
+
     <table className="user-table">
       <thead>
         <tr>

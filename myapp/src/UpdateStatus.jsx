@@ -19,7 +19,7 @@ const UpdateStatus = () => {
             setStatus(result.data.status)
           })
           .catch((err)=>console.log(err))
-        },[])
+        },[id])
   
         const update =(e)=>{
           e.preventDefault()
