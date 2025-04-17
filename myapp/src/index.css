@@ -1,0 +1,1832 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+nav{
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.seatwidth{
+  background-color: blue;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+h6{
+  color: white;
+}
+
+
+
+
+.seat-container {
+  padding: 20px;
+}
+
+.seat-list {
+  background-color: rgb(24, 164, 169);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.seat-item {
+ 
+  height: 25px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.seat-list1 {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 530px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  margin-bottom: 20px;
+} */
+
+/* General Reset and Layout */
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Courier, monospace;
+}
+
+
+/*HOME LOGIN PAGE */
+
+/* Wrapper */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side (optional image/branding) */
+.login-image-side {
+  flex: 1;
+  background: url('./Assets/gettyimages-1075319628-612x612.jpg') no-repeat center center/cover;
+  display: block;
+}
+
+.login-link-text1{
+  color: red;
+  text-align: center;
+}
+
+/* Right side (form) */
+.login-form-side {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card styling */
+.login-form-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs */
+.login-input {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.login-input:focus {
+  border-color: #007BFF;
+}
+
+/* Button */
+.login-button {
+  padding: 14px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Links */
+.login-link-text {
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.login-link-text a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.login-link-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image-side {
+    display: none;
+  }
+
+  .login-form-side {
+    padding: 30px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .login-form-card {
+    gap: 15px;
+  }
+
+  .login-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .login-link-text {
+    font-size: 12px;
+  }
+}
+
+/* ....................................... */
+
+/* ................REGISTER PAGE....................... */
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.register-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.register-button {
+  padding: 12px 16px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #218838;
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 30px 20px;
+  }
+
+  .register-title {
+    font-size: 24px;
+  }
+
+  .register-button,
+  .register-input {
+    font-size: 15px;
+  }
+}
+
+
+/* ........................................... */
+/* ................TOURIST LOGIN PAGE....................... */
+.tourist-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.tourist-login-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.tourist-login-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.tourist-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tourist-login-input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.tourist-login-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.tourist-login-button {
+  padding: 12px 16px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tourist-login-button:hover {
+  background-color: #218838;
+}
+
+.tourist-login-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tourist-login-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  .tourist-login-card {
+    padding: 30px 20px;
+  }
+
+  .tourist-login-title {
+    font-size: 22px;
+  }
+
+  .tourist-login-input,
+  .tourist-login-button {
+    font-size: 15px;
+  }
+}
+
+
+/* ................TOURIST REGISTER PAGE....................... */
+.tourist-reg-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.tourist-reg-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.tourist-reg-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.tourist-reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tourist-reg-input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.tourist-reg-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.tourist-reg-button {
+  padding: 12px 16px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tourist-reg-button:hover {
+  background-color: #218838;
+}
+
+.tourist-reg-message {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  .tourist-reg-card {
+    padding: 30px 20px;
+  }
+
+  .tourist-reg-title {
+    font-size: 22px;
+  }
+
+  .tourist-reg-input,
+  .tourist-reg-button {
+    font-size: 15px;
+  }
+}
+
+/* ................HOME PAGE....................... */
+
+.home-container {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.home-login-btn,
+.home-logout-btn {
+  font-size: 7px;
+  padding:5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  border-radius: 4px;
+}
+
+.home-logout-btn {
+  background-color: red;
+
+}
+
+.home-login-link {
+  text-decoration: none;
+  color: white;
+}
+
+.home-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* margin-top: 30px; */
+  align-items: center;
+  min-height: 70vh;
+  justify-content: center;
+}
+
+.home-input-wrapper {
+  position: relative;
+}
+
+.home-input,
+.home-date-input {
+  padding: 10px;
+  width: 160px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.home-search-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.home-dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.home-dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.home-admin-btn {
+  margin-top: 25px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-input,
+  .home-date-input {
+    width: 100%;
+  }
+
+  .home-input-wrapper {
+    width: 100%;
+  }
+}
+
+/* ................RESULT PAGE....................... */
+
+.search-results-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.search-back-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.search-back-btn:hover {
+  background-color: #0056b3;
+}
+
+.search-no-results {
+  color: #888;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-back-btn {
+    width: 100%;
+  }
+}
+
+
+/*..............ADMIN REGISTER USER VIEW ..........*/
+.user-table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-table-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.edit-btn {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-table-container {
+    padding: 10px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 8px;
+  }
+
+  .edit-btn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/*...........UPDATE FORM ........*/
+.update-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.update-form-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.update-form {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.update-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-form {
+    padding: 15px;
+  }
+
+  .update-btn {
+    padding: 10px;
+  }
+}
+
+/*.........................NAVBAR...............*/
+/* Nav container */
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: #001eff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Hamburger icon */
+.mobile-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Buttons container */
+.account-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Responsive Menu - Hide by default on mobile */
+@media screen and (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .account-dropdown-wrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    height: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .account-dropdown-wrapper.show {
+    display: flex;
+  }
+
+  .account-button{
+    background-color: #ffffff !important;
+    width: 150px;
+    height: 30px;
+    border-radius: 0 !important;
+  }
+  .account-button:hover{
+    background-color: #c8bcbc !important;
+  }
+  .dropdown-menu{
+    right: 150px !important;
+    border-radius: 0% !important;
+  }
+  
+}
+
+/* Reuse your existing styles below */
+.account-button {
+  background-color: #f0f0f0;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.linkcss1 {
+  text-decoration: none;
+  color: #000;
+  
+}
+.linkcss{
+  text-decoration: none;
+  color: #000;
+  font-size: 10px;
+  
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 6px;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-menu li button {
+  background-color: rgb(219, 29, 29);
+  padding: 5px 32px;
+  font-size: 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+}
+
+.dropdown-menu li button:hover,
+.dropdown-menu li:hover {
+  background-color: #e4d9d9;
+}
+
+
+/*...................ABOUT PAGE..........*/
+/* Container & Grid */
+.custom-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.about-box {
+  flex: 1 1 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+/* Make two columns on medium to large screens */
+@media (min-width: 768px) {
+  .about-box {
+    flex: 0 0 48%;
+  }
+}
+
+/* Typography */
+.h1tag {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+  background-color: #f0f0f0;
+  margin-top: 40px;
+}
+
+.input-loco {
+  display: inline-block;
+}
+
+.loco-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.loco-btn img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Center text */
+.centered-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*............bookedcustome..........*/
+.all-bookings-wrapper {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.no-booking-text {
+  text-align: center;
+  font-size: 1rem;
+  color: gray;
+}
+
+.booking-card {
+  border: 1px solid #333;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #8db0eb;
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.seat-list {
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+
+.seat-item {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .booking-card {
+    padding: 10px;
+  }
+
+  .booking-title {
+    font-size: 1.5rem;
+  }
+
+  .seat-item {
+    font-size: 0.9rem;
+  }
+
+  .seat-list {
+    padding-left: 15px;
+  }
+}
+
+/*...................tourist regesters...........*/
+.user-table-wrapper {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.user-table-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Container to enable scroll on small devices */
+.table-container {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.user-table th {
+  background-color:  #66c4f0;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .user-table-title {
+    font-size: 1.5rem;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  .edit-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+/*............torist coustomer ...........*/
+.vehicle-table-wrapper {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.vehicle-table-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Scroll container for mobile */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Full bordered table */
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+  min-width: 700px;
+  background-color: #ffffff;
+}
+
+.vehicle-table th,
+.vehicle-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #333; /* <-- This ensures visible borders */
+  font-size: 0.95rem;
+}
+
+.vehicle-table th {
+  background-color: #66c4f0;
+  color: #333;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .vehicle-table-title {
+    font-size: 1.5rem;
+  }
+
+  .vehicle-table th,
+  .vehicle-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+}
+/*.....................Update the register for the tourister...........*/
+.update-form-wrapper {
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.update-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-input,
+.form-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .update-form-wrapper {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/*................addbus css....................*/
+.admin-panel-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-panel-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.admin-btn-back,
+.admin-btn-view {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-btn-back:hover,
+.admin-btn-view:hover {
+  background-color: #005fa3;
+}
+
+.admin-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.admin-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.admin-submit-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-submit-btn:hover {
+  background-color: #218838;
+}
+
+.admin-products-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.admin-product-item {
+  background-color: #007bff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.admin-product-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.admin-edit-btn,
+.admin-delete-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-edit-btn {
+  background-color: #ffc107;
+}
+
+.admin-edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.admin-delete-btn {
+  background-color: #dc3545;
+}
+
+.admin-delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .admin-panel-nav {
+    justify-content: space-between;
+  }
+
+  .admin-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .admin-product-item {
+    font-size: 0.9rem;
+  }
+}
+
+
+/*.................see the bus............*/
+.adminpage-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.adminpage-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.adminpage-back-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.adminpage-back-btn:hover {
+  background-color: #005fa3;
+}
+
+.adminpage-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.adminpage-product-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.adminpage-product-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .adminpage-container {
+    padding: 10px;
+  }
+
+  .adminpage-product-item {
+    font-size: 0.9rem;
+  }
+
+  .adminpage-back-btn {
+    width: 100%;
+  }
+}
+
+/*.............buslist result..............*/
+
+.buslist-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.buslist-card {
+  background-color: #ffe0e0;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.buslist-info {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.buslist-book-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buslist-book-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .buslist-card {
+    padding: 10px;
+  }
+
+  .buslist-info {
+    font-size: 0.95rem;
+  }
+
+  .buslist-book-btn {
+    width: 100%;
+  }
+}
+
+
+/*.........seat sellection.....*/
+.seat-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.seat-header h2 {
+  font-size: 1.8rem;
+}
+
+.bus-type-label {
+  font-size: 1.4rem;
+  margin: 15px 0;
+}
+
+.seat-legend {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  
+}
+
+.seat-color {
+  padding: 3px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.seat-available-color {
+  background-color: blue;
+}
+
+.seat-booked-color {
+  background-color: red;
+}
+
+.seat-selected-color {
+  background-color: green;
+}
+
+.seat-select-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.seat-select-item {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.seat-select-item.seat-available {
+  background-color: blue;
+  color: white;
+}
+
+.seat-select-item.seat-booked {
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+
+.seat-select-item.seat-selected {
+  background-color: green;
+  color: white;
+}
+
+.sleeper-layout { 
+  max-width: 600px;
+}
+
+.threeseatert1{
+max-width: 750px;
+
+
+
+}
+.sleeper-layout-fit{
+  display: flex;
+  flex-direction: column; /* default for desktop */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow-x:auto
+}
+.sleeper-layout2{
+  margin: 35px;
+}
+.threeseatert{
+display: flex;
+justify-content: center;
+
+
+  
+  
+  }
+.selected-seats-label {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.seat-action {
+  margin-top: 20px;
+}
+
+.seat-book-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seat-book-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.three-seating-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.three-seating {
+  /* width: 750px;  */
+  min-width: 750px;
+  max-width: 750px;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .seat-color {
+    width: 30px !important;
+  }
+
+  .seat-select-item {
+    font-size: 0.9rem;
+  }
+  .h3-tag{
+    margin-right: 350px;
+  }
+  .h3-tag1{
+    margin-right: 500px;
+  }
+
+  .seat-book-button {
+    width: 100%;
+  }
+
+    .sleeper-layout-fit{
+      display: flex;
+      flex-direction: column; /* default for desktop */
+      justify-content: center;
+      align-items: start;
+      gap: 2rem;
+    }
+    .three-seating-div {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+    .sleeper-layout{
+      min-width: 600px;
+    } 
+    
+}
+
+/*.........formfill.....*/
+
+.booking-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-details {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.booking-details h2 {
+  margin-bottom: 15px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.passenger-form {
+  background-color: #ffeaea;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffb3b3;
+}
+
+.passenger-form h4 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #218838;
+}
+
+/* 🔁 Responsive adjustments */
+@media (max-width: 600px) {
+  .booking-details,
+  .passenger-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 6px 8px;
+  }
+
+  .confirm-btn {
+    width: 100%;
+  }
+}
+
+/*.................main admin page..........*/
+.admin-nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.admin-nav-item button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.admin-nav-item button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .admin-nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-nav-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .admin-nav-item button {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+/*................tourist upload.........*/
+.vehicle-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height for vertical centering */
+  background-color: #f0f0f0; /* Optional background */
+  padding: 20px;
+}
+
+.vehicle-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 800px;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-form input,
+.vehicle-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 25px;
+  min-width: 200px;
+}
+
+.vehicle-form button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.vehicle-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .vehicle-form {
+    flex-direction: column;
+  }
+
+  .vehicle-form input,
+  .vehicle-form button {
+    width: 100%;
+  }
+}
+
+
