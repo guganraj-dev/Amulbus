@@ -38,7 +38,7 @@ function App() {
   <Route path="/adminpage" element={<Admin/>} />
   <Route path="/homepage" element={<HomePage search={Statebus} setSearch={setsatebus} />} />
   <Route path="/register" element={<Register />} />
-  <Route path="/admin" element={<AdminPanel products={allbuses} setProducts={setallbuses} />} />
+  <Route path="/admin" element={<AdminPanel products={allbuses} setproducts={setallbuses} />} />
   <Route path="/results" element={<Results />} />
   <Route path="/bookedcus" element={<BookedCustomer />} />
   <Route path="/buslist" element={<AdminPage products={allbuses}/>} />

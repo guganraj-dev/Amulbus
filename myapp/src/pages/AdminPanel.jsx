@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { getProducts, addProduct, updateProduct, deleteProduct } from "../components/api";
 import { Link } from "react-router-dom";
 
-const AdminPanel = ({products,setProducts}) => {
+const AdminPanel = ({products,setproducts}) => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ source: "", destination: "", availableDates: "",time:"",availableSeat:"",busType:"" });
   const [editId, setEditId] = useState(null);
   const token = localStorage.getItem("token");
   const [isAdmin, setIsAdmin] = useState(false);
-
+  // const [products,setproducts]=useState([])
   useEffect(() => {
     const role = localStorage.getItem("role");
     if (role !== "admin") {
@@ -21,7 +21,7 @@ const AdminPanel = ({products,setProducts}) => {
     const fetchData = async () => {
       try {
         const res = await getProducts();
-        console.log(res.data);
+        setproducts(res.data);
       } catch (error) {
         console.error("Error fetching products:", error); 
       }
@@ -57,12 +57,12 @@ const AdminPanel = ({products,setProducts}) => {
     try {
       if (editId) {
         await updateProduct(editId, formData, token);
-        setProducts((prev) =>
+        setproducts((prev) =>
           prev.map((p) => (p._id === editId ? { ...p, ...formData } : p))
         );
       } else {
         const res = await addProduct(formData, token);
-        setProducts((prev) => [...prev, res.data]);
+        setproducts((prev) => [...prev, res.data]);
       }
   
       setForm({
@@ -91,7 +91,7 @@ const AdminPanel = ({products,setProducts}) => {
   const handleDelete = async (id) => {
     try {
       await deleteProduct(id, token);
-      setProducts((prev) => prev.filter((p) => p._id !== id));
+      setproducts((prev) => prev.filter((p) => p._id !== id));
     } catch (error) {
       console.error("Error deleting product:", error);
     }
