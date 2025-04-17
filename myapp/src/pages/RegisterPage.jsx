@@ -16,7 +16,7 @@ const RegisterPage = () => {
         } else {
           setIsAdmin(true);
         }
-      axios.get("http://localhost:5000/reg")
+      axios.get("https://amulbus.onrender.com/reg")
       .then((result)=>setUserdata(result.data))
       .catch((err)=>console.log(err))
     },[navigate])

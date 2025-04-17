@@ -12,7 +12,7 @@ const UpdateStatus = () => {
     const Navigate = useNavigate()  
   
      useEffect(()=>{
-          axios.get("http://localhost:5000/touristreg/"+id)
+          axios.get("https://amulbus.onrender.com/touristreg/"+id)
           .then((result)=>{
             console.log(result)
             setName(result.data.name)
@@ -23,7 +23,7 @@ const UpdateStatus = () => {
   
         const update =(e)=>{
           e.preventDefault()
-          axios.put("http://localhost:5000/touristreg/"+id,{UserName,Status},{
+          axios.put("https://amulbus.onrender.com/"+id,{UserName,Status},{
             headers: {
             Authorization: token,
           }})

@@ -41,7 +41,7 @@ const Formfill = ({ dateState }) => {
     console.log("Sending data:", fullData);
 
     try {
-      await axios.post("http://localhost:5000/bookinguser", fullData);
+      await axios.post("https://amulbus.onrender.com/bookinguser", fullData);
       alert("Booking successful!");
       navigate('/homepage')
     } catch (error) {

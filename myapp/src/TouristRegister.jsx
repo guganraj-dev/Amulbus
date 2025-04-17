@@ -29,7 +29,7 @@ const TouristRegister = () => {
     
 
     try {
-      const res = await axios.post("http://localhost:5000/tourist/register", formData);
+      const res = await axios.post("https://amulbus.onrender.com/tourist/register", formData);
       setMessage(res.data.message);
       setFormData({
         name: "",

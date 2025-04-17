@@ -23,7 +23,7 @@ const TouristDashboard = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.post("http://localhost:5000/submit-travel", formData, {
+      const res = await axios.post("https://amulbus.onrender.com/submit-travel", formData, {
         headers: {
           Authorization: token
         }

@@ -12,7 +12,7 @@ const TouristLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/tourist/login", {
+      const res = await axios.post("https://amulbus.onrender.com/tourist/login", {
         email,
         password,
       });

@@ -16,7 +16,7 @@ const AllBookings = () => {
     } else {
       setIsAdmin(true);
     }
-    axios.get("http://localhost:5000/allbookings")
+    axios.get("https://amulbus.onrender.com/allbookings")
       .then(res => setBookings(res.data))
       .catch(err => console.error("Error fetching bookings:", err));
   }, [navigate]);

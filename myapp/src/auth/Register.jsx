@@ -17,7 +17,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/register", formData);
+      await axios.post("https://amulbus.onrender.com/register", formData);
       alert("Registration successful! Please log in.");
       navigate("/"); // Redirect to login page
     } catch (error) {

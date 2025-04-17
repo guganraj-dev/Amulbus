@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://amulbus.onrender.com";
 
 export const register = (userData) => axios.post(`${API_URL}/register`, userData);
 export const login = (userData) => axios.post(`${API_URL}/login`, userData);

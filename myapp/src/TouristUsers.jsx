@@ -17,7 +17,7 @@ const TouristUsers = () => {
         } else {
           setIsAdmin(true);
         }
-      axios.get("http://localhost:5000/touristreg")
+      axios.get("https://amulbus.onrender.com/touristreg")
       .then((result)=>setUserdata(result.data))
       .catch((err)=>console.log(err))
     },[navigate])

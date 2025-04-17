@@ -33,7 +33,7 @@ const HomePage = ({search,setSearch}) => {
     setRole(storedRole);
 
     axios
-      .get("http://localhost:5000/products")
+      .get("https://amulbus.onrender.com/products")
       .then((response) => {
         setBuses(response.data);
       })
