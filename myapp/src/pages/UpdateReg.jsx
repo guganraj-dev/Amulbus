@@ -20,7 +20,7 @@ const Update = () => {
           setRole(result.data.role)
         })
         .catch((err)=>console.log(err))
-      },[])
+      },[id])
 
       const update =(e)=>{
         e.preventDefault()

@@ -19,7 +19,7 @@ import TouristUsers from "./TouristUsers";
 import UpdateStatus from "./UpdateStatus";
 import TouristBookings from "./auth/TouristBookings";
 
-import Demo from './demo'
+
 import About from "./About";
 import Help from "./Help";
 
@@ -56,7 +56,7 @@ function App() {
   <Route path="/help" element={<Help/>} />
 
   
-  <Route path="/demo" element={<Demo/>} />
+
   
   
 </Routes>
