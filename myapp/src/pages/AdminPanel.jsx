@@ -27,7 +27,7 @@ const AdminPanel = ({products,setproducts}) => {
       }
     };
     fetchData();
-  }, [navigate]);
+  }, [navigate,setproducts]);
 
 
   const formatAMPM = (dateStr) => {
