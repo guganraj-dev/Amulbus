@@ -17,7 +17,10 @@ const Admin = () => {
         }
       }, [navigate]);
   return (
+
 <div className="admin-nav-container">
+{isAdmin && <p>Welcome, Admin!</p>}
+
   <div className="admin-nav-item">
     <Link to="/homepage"><button>HOME PAGE</button></Link>
   </div>

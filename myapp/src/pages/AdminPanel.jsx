@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const AdminPanel = ({products,setProducts}) => {
   const navigate = useNavigate();
-  // const [products, setProducts] = useState([]);
   const [form, setForm] = useState({ source: "", destination: "", availableDates: "",time:"",availableSeat:"",busType:"" });
   const [editId, setEditId] = useState(null);
   const token = localStorage.getItem("token");
@@ -22,9 +21,9 @@ const AdminPanel = ({products,setProducts}) => {
     const fetchData = async () => {
       try {
         const res = await getProducts();
-        setProducts(res.data);
+        console.log(res.data);
       } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetching products:", error); 
       }
     };
     fetchData();

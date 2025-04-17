@@ -28,6 +28,8 @@ const RegisterPage = () => {
       }, []);
   return (
     <div className="user-table-container">
+      {isAdmin && <p>Welcome, Admin!</p>}
+
       <h2 className="user-table-title">User Table</h2>
 
       <div className="user-table-wrapper">
