@@ -34,8 +34,7 @@ const SeatSelect = () => {
 
   const isSeatSelected = (seat) => selectedSeats.includes(seat);
 
-  
-
+  const isSeater = selectedBus.busType === "Seater";
   const isSleeper = selectedBus.busType === "Sleeper";
   const setwidth = isSleeper ? "80px" : "50px";
 
@@ -59,6 +58,8 @@ const SeatSelect = () => {
   const raightSeats = ["D", "E"].flatMap((letter) =>
     Array.from({ length: 12 }, (_, i) => `${letter}${i + 1}`)
   );
+  const others = given.availableSeat || [];
+
 
   const renderSeats = (seats) => (
     <ul className="seat-select-list sleeper-seat-list">
@@ -100,6 +101,7 @@ const SeatSelect = () => {
         <h2>SeatSelect</h2>
         <h3>{given.source}</h3>
         <h3>{given.destination}</h3>
+        
       </div>
   
       <h2 className="bus-type-label">{selectedBus.busType}</h2>
@@ -107,13 +109,17 @@ const SeatSelect = () => {
       <div className="seat-legend">
         <span><strong>AVAILABLE</strong></span>
         <div className="seat-color seat-available-color" style={{ width: setwidth }}>1</div>
-  
-        <span><strong>BOOKED</strong></span>
-        <div className="seat-color seat-booked-color" style={{ width: setwidth }}>1</div>
+        {(isSleeper||isSeater) && (<>
+          <span><strong>BOOKED</strong></span>
+          <div className="seat-color seat-booked-color" style={{ width: setwidth }}>1</div>
+          </>)}
+
   
         <span><strong>SELECTED</strong></span>
         <div className="seat-color seat-selected-color" style={{ width: setwidth }}>1</div>
       </div>
+
+
   
       {isSleeper ? (
         <div className="sleeper-layout-fit">
@@ -135,20 +141,32 @@ const SeatSelect = () => {
             </div>
 
         </div>
-      ) : (
+      ) : isSeater ?(
         <div className="three-seating-div" >
           <div className="three-seating">
           <h3 className="h3-tag1">THREE SEATER</h3>
           {renderSitter(leftSeats)}
           <h3 className="h3-tag1">TWO SEATER</h3>
-          {renderSitter(raightSeats)}
+          {renderSitter(raightSeats)} 
           </div>
         </div>
+      ):(
+        
+       
+          <div className="three-seating-div" >
+          <div className="three-seating">
+          <h3 className="h3-tag1">AVAILABLE SEATS:</h3>
+          {renderSitter(others)}
+
+          </div>
+           </div>
+
+
       )}
   
       {selectedSeats.length > 0 && (
         <div className="selected-seats-label">
-          <h4>Selected seats: {selectedSeats.join(", ")}</h4>
+          <h4>Selected seats:{selectedSeats.join(", ")}</h4>
         </div>
       )}
   

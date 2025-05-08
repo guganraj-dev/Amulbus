@@ -42,7 +42,7 @@ const AdminPanel = ({products,setproducts}) => {
   };
   
 
-  // ✅ Function to handle form submission (Add & Update)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -81,13 +81,13 @@ const AdminPanel = ({products,setproducts}) => {
   
   
 
-  // ✅ Function to handle Edit button click
+
   const handleEdit = (product) => {
     setEditId(product._id); // Set edit mode
     setForm({ source: product.source, destination: product.destination, availableDates: product.availableDates,time:product.time,availableSeat:product.availableSeat,busType:product.busType}); // Pre-fill form
   };
 
-  // ✅ Function to handle Delete button click
+
   const handleDelete = async (id) => {
     try {
       await deleteProduct(id, token);
@@ -172,15 +172,19 @@ const AdminPanel = ({products,setproducts}) => {
 
 
 
-    <input
-      className="admin-input"
-      type="text"
-      name="busType"
-      placeholder="Enter Bus type"
-      value={form.busType}
-      onChange={(e) => setForm({ ...form, busType: e.target.value })}
-      required
-    />
+<select
+  className="admin-input"
+  name="busType"
+  value={form.busType}
+  onChange={(e) => setForm({ ...form, busType: e.target.value })}
+  required
+>
+  <option value="">Select Bus Type</option>
+  <option value="Sleeper">Sleeper</option>
+  <option value="Seater">Seater</option>
+  <option value="Car">Car</option>
+  <option value="Van">Van</option>
+</select>
 
     <button type="submit" className="admin-submit-btn">
       {editId ? "Update Product" : "Add Product"}

@@ -14,7 +14,7 @@ const Buslist = ({available}) => {
       <div className="buslist-info"><strong>Source:</strong> {data.source}</div>
       <div className="buslist-info"><strong>Destination:</strong> {data.destination}</div>
       <div className="buslist-info"><strong>Type:</strong> {data.busType}</div>
-      <div className="buslist-info"><strong>Time:</strong> {data.name}</div>
+      <div className="buslist-info"><strong>Time:</strong> {data.time}</div>
       
       <button
         className="buslist-book-btn"

@@ -1408,7 +1408,9 @@
 }
 
 .seat-booked-color {
-  background-color: red;
+  background-color: rgb(255, 255, 255);
+  border: 0.2px solid rgb(183, 175, 175);
+  color: black;
 }
 
 .seat-selected-color {
